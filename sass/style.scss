@@ -22,6 +22,20 @@ html{
     overflow-x:hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
+
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background: #2c2c54;
+        border-radius: .5rem;
+    }
+
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    
 }
 
 section{
@@ -128,6 +142,10 @@ section{
     align-items: center;
     justify-content: space-between;
     box-shadow: 0 .5rem 1rem rgba(0,0,0, .1);
+
+    #menu-btn{
+        display: none;
+    }
 
     .logo{
         font-size: 2.5rem;
@@ -242,7 +260,7 @@ section{
     display: none;
 }
 
-.home {
+.home{
     display: flex;
     flex-wrap: wrap;
     gap:1.5rem;
@@ -298,12 +316,13 @@ section{
     display: none;
     flex-wrap: wrap;
     gap:1.5rem;
-    min-height: 100vh;
+    // min-height: 100vh;
     align-items: center;
     background:url(../img/Y1.png) no-repeat;
     background-size: cover;
     background-position: center;
     background: #f2f2f2;
+    margin-top: 6rem;
 
     .content{
         flex:1 1 40rem;
@@ -318,7 +337,7 @@ section{
 
         h3{
             text-transform: uppercase;
-            font-size: 6rem;
+            font-size: 4rem;
             color: #2c2c54;
             font-weight:900;
             font-family: 'Poppins', sans-serif;
@@ -603,11 +622,19 @@ section{
                     color: #2c2c54;
                 }
 
+                p{
+                    margin: 3rem 0 1.5rem;
+                    font-size: 1.6rem;
+                    color: #555;
+                    letter-spacing: 1;
+                    text-transform: none;
+                }
+
                 .price{
                     font-size: 3rem;
                     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
                     font-weight: 300;
-                    margin: 3rem;
+                    margin: 1rem 0;
                     color: #f2a20c;
 
                     span{
@@ -670,7 +697,7 @@ section{
             padding: 2rem;
 
             img{
-                width: 35rem;
+                width: 100%;
                 margin-bottom: 1.5rem;
                 animation:updown 3s linear infinite;
             }
@@ -755,10 +782,246 @@ section{
 }
 
 
+.reviews {
+
+    .slide{
+
+        .text{
+            padding: 2rem;
+            font-size: 1.5rem;
+            font-style: italic;
+            background: #eee;
+            border-radius: 1rem;
+            color: #10221b;
+            line-height: 2;
+            position: relative;
+            z-index: 0;
+            margin-bottom: 3rem;
+
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: -1.4rem;
+                left: 1.2rem;
+                height: 4rem;
+                width: 3rem;
+                background: #eee;
+                transform: rotate(45deg);
+            }
+        }
+
+        .user{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img{
+                height: 7rem;
+                width: 7rem;
+                border-radius: 50%;
+            }
+
+            .info{
+
+                h3{
+                    font-size: 2rem;
+                    color: #10221b;
+                }
+
+                span{
+                    color: #219150;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.gallery{
+
+    background: #f2f2f2;
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(31rem, 1fr));
+        gap: 1.5rem;
+
+        .box{
+            height: 25rem;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.4);
+
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .content{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(255, 255, 255, 0.4);
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                display: none;
+                padding: 2rem;
+
+                h3{
+                    font-size: 2.5rem;
+                    color: var(--white);
+                    animation: fadeIn .3s linear backwards;
+                }
+
+                p{
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    color: var(--white);
+                    animation: fadeIn .2s linear backwards .4s;
+                    line-height: 2;
+                    padding: 1rem 0;
+                    text-shadow: 0 .5rem 1rem rgba(255, 255, 255, 1);
+                }
+
+                .btn{
+                    animation: fadeIn .2s linear backwards .6s;
+                }
+            }
+
+            &:hover .content{
+                display: flex;
+            };
+        }
+    }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(0.4);
+  }
+}
+
+.footer{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/footer.jpg)no-repeat;
+    background-size: cover;
+    background-position: top;
+    background-attachment: fixed;
+
+    .box-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        gap: 1.5rem;
+
+        .box{
+
+            h3{
+                font-size: 2rem;
+                padding: 1.5rem 0;
+                color: #fff;
+            }
+
+            a{
+                display: block;
+                font-size: 1.4rem;
+                color: #fff;
+                padding: 1rem 0;
+
+                i{
+                    color: #219150;
+                    padding-right: .5rem;
+                }
+
+                &:hover{
+                    color: #219150;
+                }
+
+                &:hover i{
+                    padding-right: 2rem;
+                }
+            }
+
+            
+        }
+    }
+
+    .credit{
+        text-align: center;
+        margin-top: 2.5rem;
+        padding: 1rem;
+        padding-top: 2.5rem;
+        font-size: 2rem;
+        color: #fff;
+
+        span{
+            color: #219150;
+        }
+    }
+}
 
 
 
-// responsive
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1004px){
+    .home{
+        display: none;
+    }
+
+    .home2{
+        display: block;
+
+        .content{
+            text-align: center;
+            h3{
+                text-transform: uppercase;
+                font-size: 5rem;
+                color: #2c2c54;
+                font-weight:900;
+                font-family: 'Poppins', sans-serif;
+            }
+        }
+    }
+}
+
+
+/* responsive */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .section{
+        padding: 3rem 2rem;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    
+}
+
+
+
 @media (max-width: 900px){
 
     .popup{
@@ -833,6 +1096,58 @@ section{
 
         .box-container{
             flex-wrap: wrap;
+        }
+    }
+}
+
+@media (max-width:768px){
+    .header{
+        #menu-btn{
+            display: inline-block;  
+        }
+        
+        #menu-btn.fa-times{
+            transform: rotate(180deg);
+        }
+
+        .navbar{
+            position: absolute;
+            top: 99%;
+            left: 0;
+            right: 0;
+            background: #f2f2f2;
+            border: .2rem 0 .2rem 0 #666;
+            padding: 0 2rem;
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                z-index: 999999999999;
+            }
+
+            a{
+                display: block;
+                font-size: 2rem;
+                margin: 2.5rem 1rem;
+            }
+        }
+    }
+
+}
+
+@media(max-width:321px){
+
+    .home2{
+        
+        .content{
+            text-align: center;
+            h3{
+                text-transform: uppercase;
+                font-size: 4rem;
+                color: #2c2c54;
+                font-weight:900;
+                font-family: 'Poppins', sans-serif;
+            }
         }
     }
 }

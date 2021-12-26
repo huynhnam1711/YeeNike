@@ -34,3 +34,45 @@ document.querySelector('#search-btn').onclick = () =>{
 document.querySelector('#close-search').onclick = () =>{
     searchForm.classList.remove('active');
 }
+
+
+let menu = document.querySelector('#menu-btn');
+let navbar = document.querySelector('.header .navbar');
+
+menu.onclick = () => {
+    menu.classList.toggle('fa-times');
+    navbar.classList.toggle('active');
+    searchBtn.classList.remove('fa-times');
+    searchForm.classList.remove('active');
+}
+
+// // woindow scroll
+// window.onscroll = () => {
+//   searchBtn.classList.remove('fa-times');
+//   searchFrom.classList.remove('active');
+//   menu.classList.remove('fa-times');
+//   navbar.classList.remove('active');
+// }
+
+
+// swiper-slide > sclient's
+var swiper = new Swiper(".review-slider", {
+  loop:true, 
+  grabCursor:true,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      640: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
+  },
+});
