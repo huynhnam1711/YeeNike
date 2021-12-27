@@ -524,9 +524,9 @@ section{
 
     .model{
         z-index: 2;
-        background: rgba(255, 255, 255, 0.5);
+        background: rgba(0, 0, 0, 0.5);
         position: fixed;
-        top: 0;
+        top: 10%;
         right: 0;
         bottom: 0;
         left: 0;
@@ -551,33 +551,12 @@ section{
             
             .icon-close{
                 color: #555;
-                z-index: 3;
+                z-index: 99;
                 position: absolute;
                 right: 0;
                 font-size: 2rem;
                 margin: 2rem;
                 cursor: pointer;
-            }
-
-            .popup-img-first{
-                z-index: 2;
-                background: #E9EAEC;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: 45%;
-                height: 90%;
-                transform: translateY(25px);
-                border-top-left-radius: 1rem;
-                border-bottom-left-radius: 1rem;
-
-                img{
-                    z-index: 2;
-                    position: relative;
-                    width: 45rem;
-                    left: -5rem;
-                }
             }
 
             .popup-img{
@@ -589,7 +568,7 @@ section{
                 align-items: center;
                 width: 45%;
                 height: 90%;
-                transform: translateY(25px);
+                transform: translateY(2.5rem);
                 border-top-left-radius: 1rem;
                 border-bottom-left-radius: 1rem;
 
@@ -606,23 +585,27 @@ section{
                 background: #fff;
                 display: flex;
                 flex-direction: column;
-                width: 55%;
+                /* width: 55%; */
                 height: 100%;
                 box-sizing: border-box;
                 padding: 4rem;
                 border-radius: 1rem;
-                text-align: center;
 
                 h2{
                     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-size: 5rem;
+                    font-size: .5rem;
                     font-weight: bolder;
-                    line-height: 2rem;
+                    line-height: .2rem;
                     margin: 1rem;
                     color: #2c2c54;
+                    font-size: 4rem;
+                    line-height: 2rem;
+                    margin: 1rem;
                 }
 
                 p{
+                    font-size: 1.5rem;
+                    margin: 1rem;
                     margin: 3rem 0 1.5rem;
                     font-size: 1.6rem;
                     color: #555;
@@ -933,6 +916,10 @@ section{
                 color: #fff;
                 padding: 1rem 0;
 
+                .no-upscap{
+                    text-transform: none;
+                }
+
                 i{
                     color: #219150;
                     padding-right: .5rem;
@@ -966,21 +953,7 @@ section{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// responsive
 @media (max-width:1004px){
     .home{
         display: none;
@@ -1003,7 +976,6 @@ section{
 }
 
 
-/* responsive */
 @media (max-width:991px){
     html{
         font-size: 55%;
@@ -1020,59 +992,71 @@ section{
     
 }
 
-
-
 @media (max-width: 900px){
+    .details{
 
-    .popup{
-        flex-direction: column;
-        width: 55rem;
-        height: auto;
+        .model{
 
-        .popup-img{
-            z-index: 3;
-            width: 100%;
-            height: 20rem;
-            transform: translateY(0);
-            border-bottom-left-radius: 0;
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 1rem;
+            .popup{
+                flex-direction: column;
+                width: 55rem;
+                height: auto;
 
-            img{
-                left: initial;
-                max-width: 100%;
-            }
-        }
+                a{
 
-        .content{
-            width: 100%;
-            height: auto;
-            padding: 2rem;
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
+                    .icon-close{
+                        z-index: 6;
+                        color: #fff;
+                    }
+               }
 
-            h2{
-                margin: 2rem .5rem .5rem .5rem;
-                font-size: 2.5rem;
-            }
+                .popup-img{
+                    z-index: 5;
+                    width: 100%;
+                    height: 100%;
+                    transform: translateY(0);
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
 
-            .price{
-                margin: .5rem;
-                font-size: 3rem;
-            }
+                    img{
+                        left: initial;
+                        max-width: 100%;
+                    }
+                }
 
-            .add-cart-btn{
-                margin: .5rem auto;
-                padding: .5rem 4rem;
-                font-size: 1.4rem;
-            }
+                .content{
+                    width: 100%;
+                    height: auto;
+                    padding: 2rem;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
 
-            .add-wish{
-                font-size: 1.4rem;
-            }
+                    h3{
+                        margin: 2rem .5rem .5rem .5rem;
+                        font-size: 2.5rem;
+                    }
 
-            .close-btn{
-                z-index: 4;
+                    p{
+                        margin: .5rem;
+                        font-size: 1.3rem;
+                    }
+
+                    .price{
+                        margin: .5rem;
+                        font-size: 3rem;
+                    }
+
+                    .add-cart-btn{
+                        margin: .5rem auto;
+                        padding: .5rem 4rem;
+                        font-size: 1.4rem;
+                    }
+
+                    .add-wish{
+                        font-size: 1.4rem;
+                    }
+                }
             }
         }
     }
@@ -1119,10 +1103,13 @@ section{
             border: .2rem 0 .2rem 0 #666;
             padding: 0 2rem;
             clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,1);
+
 
             &.active{
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 z-index: 999999999999;
+                
             }
 
             a{

@@ -1053,6 +1053,10 @@ section {
   padding: 1rem 0;
 }
 
+.footer .box-container .box a .no-upscap {
+  text-transform: none;
+}
+
 .footer .box-container .box a i {
   color: #219150;
   padding-right: .5rem;

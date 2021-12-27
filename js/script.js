@@ -46,7 +46,7 @@ menu.onclick = () => {
     searchForm.classList.remove('active');
 }
 
-// // woindow scroll
+// // window scroll
 // window.onscroll = () => {
 //   searchBtn.classList.remove('fa-times');
 //   searchFrom.classList.remove('active');
@@ -76,3 +76,6 @@ var swiper = new Swiper(".review-slider", {
       },
   },
 });
+
+
+
