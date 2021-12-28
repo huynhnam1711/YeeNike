@@ -431,6 +431,7 @@ section{
             color: #E9EAEC;
             overflow-y: hidden;
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.8);
+            margin: auto;
 
             img{
                 position: absolute;
@@ -891,6 +892,62 @@ section{
   }
 }
 
+.contact{
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        object-fit: cover;
+        gap: 1rem;
+
+        .map{
+            flex: 1 1 45rem;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        form{
+            flex: 1 1 45rem;
+            width: 100%;
+            padding: 5rem 2rem;
+            text-align: center;
+            background: #13131a;
+
+            h3{
+                text-transform: uppercase;
+                color: #f2a20c;
+                font-size: 3rem;
+            }
+
+            .inputBox{
+                display: flex;
+                align-items: center;
+                margin: 2rem 0;
+                background: #FFF;
+                border: #e9eaec;
+                border-radius: 5rem;
+
+                span{
+                    font-size: 2rem;
+                    color: #f5c94f;
+                    padding: 1.5rem;
+                }
+
+                input{
+                    // width: 100%;
+                    height: 100%;
+                    color: #fff;
+                    text-transform: none;
+                    // background: ;
+                }
+            }
+        }
+    }
+}
+
+
+
 .footer{
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/footer.jpg)no-repeat;
     background-size: cover;
@@ -981,8 +1038,8 @@ section{
         font-size: 55%;
     }
 
-    .section{
-        padding: 3rem 2rem;
+    section{
+        padding: 2rem;
     }
 
     .header {
@@ -1122,6 +1179,32 @@ section{
 
 }
 
+@media(max-width: 414px){
+    .products{
+        .box-container{
+            .box {
+                padding: 4rem 7rem 0;
+                img {
+                    // left: 20%;
+                }
+            }
+        } 
+    } 
+}
+
+@media(max-width: 375px){
+    .products{
+        .box-container{
+            .box {
+                padding: 4rem 8rem 0;
+                img {
+                    // left: 20%;
+                }
+            }
+        } 
+    } 
+}
+
 @media(max-width:321px){
 
     .home2{
@@ -1137,6 +1220,17 @@ section{
             }
         }
     }
+
+    .products{
+        .box-container{
+            .box {
+                padding: 4rem 3rem 0;
+                img {
+                    // left: 20%;
+                }
+            }
+        } 
+    } 
 }
 
 
