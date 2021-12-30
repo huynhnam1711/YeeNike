@@ -1,4 +1,4 @@
-alert('Cập nhật thêm mục: "Our Product"')
+// alert('Cập nhật thêm mục: "Our Product"')
 // view popup product
 let popupViews = document.querySelectorAll('.model');
 let popupBtns = document.querySelectorAll('.btn');
@@ -54,6 +54,41 @@ menu.onclick = () => {
 //   menu.classList.remove('fa-times');
 //   navbar.classList.remove('active');
 // }
+
+const modelRequired = document.querySelector('.security');
+const closeModel = document.querySelector('.icon-btn');
+
+closeModel.onclick = () =>{
+  modelRequired.classList.toggle('active')
+}
+
+// login-required
+var CORRECT_USER = 'YG17';
+var CORRECT_PASS = '11'
+
+var inputUsername = document.getElementById('username');
+var inputPassword = document.getElementById('password');
+
+var formLogin = document.getElementById('form-login');
+
+if(formLogin.attachEvent){
+  formLogin.attachEvent('submit', onFormSubmit);
+}else{
+  formLogin.addEventListener('submit', onFormSubmit);
+}
+
+function onFormSubmit(e) {
+
+  var username = inputUsername.value;
+  var password = inputPassword.value;
+
+  if(username == CORRECT_USER && password == CORRECT_PASS){
+    modelRequired.classList.add('active')
+    e.preventDefault();
+  }else{
+    alert('Thông tin đăng nhập không chính xác');
+  }
+}
 
 
 var swiper = new Swiper(".products-slider", {
