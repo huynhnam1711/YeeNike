@@ -1,4 +1,4 @@
-// alert('Cập nhật thêm mục: "Our Product"')
+alert('Cập nhật thêm mục: "Our Product"')
 // view popup product
 let popupViews = document.querySelectorAll('.model');
 let popupBtns = document.querySelectorAll('.btn');
