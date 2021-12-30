@@ -44,17 +44,18 @@ section{
 
 .heading{
     text-align: center;
-    text-transform: uppercase;
     font-size: 4rem;
-    color:#2c2c54;
-    padding:1rem;
+    color: #444;
+    text-transform: capitalize;
+    margin-bottom: 3rem;
 
     span{
+        color: #ed2d34;
         text-transform: uppercase;
-        color: #ff9f1a;
     }
 }
 
+// begin: button all css
 .btn{
     display: inline-block;
     margin-top: 1rem;
@@ -110,6 +111,27 @@ section{
     }
 
 }
+
+.btn-pd{
+    margin-top: 1rem;
+    display: inline-block;
+    border-radius: 5rem;
+    padding: 1.2rem 3rem;
+    border: 0.2rem solid #444;
+    cursor: pointer;
+    background: none;
+    color: #444;
+    font-size: 2rem;
+    text-transform: capitalize;
+  
+    &:hover{
+        border-color: #ed2d34;
+        color: #fff;
+        background: #ed2d34;
+    }
+  }
+
+// end button all > css
 
 .yz-first{
     margin-top: 1rem;
@@ -663,6 +685,42 @@ section{
     }
 }
 
+.products-first{
+
+    .slide{
+        text-align: center;
+  
+        img{
+           height: 25rem;
+           margin:5rem 0;
+           transform: scale(.5);
+        }
+  
+        h3{
+            padding: 1rem 0;
+            font-size: 2.5rem;
+            color: #444;
+            text-transform: capitalize;
+            opacity: 0;
+        }
+  
+        .btn{
+           opacity: 0;
+        }
+     }
+
+    .swiper-slide-active {
+        
+        img{
+            transform: scale(1);
+        }
+
+        h3, .btn{
+            opacity: 1;
+        }
+    }
+}
+
 // yeezy
 .new-collections{
 
@@ -973,10 +1031,6 @@ section{
                 color: #fff;
                 padding: 1rem 0;
 
-                .no-upscap{
-                    text-transform: none;
-                }
-
                 i{
                     color: #219150;
                     padding-right: .5rem;
@@ -989,6 +1043,10 @@ section{
                 &:hover i{
                     padding-right: 2rem;
                 }
+            }
+
+            .no-upscap{
+                text-transform: none;
             }
 
             
@@ -1177,13 +1235,52 @@ section{
         }
     }
 
+    .products{
+        .box-container{
+            .box {
+                padding: 4rem 7rem 0;
+                img {
+                    // left: 20%;
+                }
+            }
+        } 
+    } 
+}
+
+@media (max-width:600px){
+    .products{
+        .box-container{
+            .box {
+                padding: 4rem 2rem 0;
+                img {
+                    // left: 20%;
+                }
+            }
+        } 
+    } 
+}
+
+@media (max-width:450px){
+
+   html{
+      font-size: 50%;
+   }
+
+   .banner .content h3{
+      font-size: 3rem;
+   }
+
+   .products-first .slide img{
+      height: 15rem;
+   }
+
 }
 
 @media(max-width: 414px){
     .products{
         .box-container{
             .box {
-                padding: 4rem 7rem 0;
+                padding: 4rem 11rem 0;
                 img {
                     // left: 20%;
                 }
@@ -1218,19 +1315,20 @@ section{
                 font-weight:900;
                 font-family: 'Poppins', sans-serif;
             }
-        }
+        } 
     }
 
     .products{
         .box-container{
             .box {
-                padding: 4rem 3rem 0;
+                padding: 4rem 4rem 0;
                 img {
                     // left: 20%;
                 }
             }
         } 
     } 
+
 }
 
 

@@ -35,14 +35,14 @@ section {
 
 .heading {
   text-align: center;
-  text-transform: uppercase;
   font-size: 4rem;
-  color: #2c2c54;
-  padding: 1rem;
+  color: #444;
+  text-transform: capitalize;
+  margin-bottom: 3rem;
 }
 .heading span {
+  color: #ed2d34;
   text-transform: uppercase;
-  color: #ff9f1a;
 }
 
 .btn {
@@ -95,6 +95,24 @@ section {
 .btn-yz:hover {
   background: #2c2c54;
   letter-spacing: 0.1rem;
+}
+
+.btn-pd {
+  margin-top: 1rem;
+  display: inline-block;
+  border-radius: 5rem;
+  padding: 1.2rem 3rem;
+  border: 0.2rem solid #444;
+  cursor: pointer;
+  background: none;
+  color: #444;
+  font-size: 2rem;
+  text-transform: capitalize;
+}
+.btn-pd:hover {
+  border-color: #ed2d34;
+  color: #fff;
+  background: #ed2d34;
 }
 
 .yz-first {
@@ -558,6 +576,31 @@ section {
   text-decoration: underline;
 }
 
+.products-first .slide {
+  text-align: center;
+}
+.products-first .slide img {
+  height: 25rem;
+  margin: 5rem 0;
+  transform: scale(0.5);
+}
+.products-first .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+  opacity: 0;
+}
+.products-first .slide .btn {
+  opacity: 0;
+}
+.products-first .swiper-slide-active img {
+  transform: scale(1);
+}
+.products-first .swiper-slide-active h3, .products-first .swiper-slide-active .btn {
+  opacity: 1;
+}
+
 .new-collections .box-container {
   gap: 2rem;
   display: flex;
@@ -803,9 +846,6 @@ section {
   color: #fff;
   padding: 1rem 0;
 }
-.footer .box-container .box a .no-upscap {
-  text-transform: none;
-}
 .footer .box-container .box a i {
   color: #219150;
   padding-right: 0.5rem;
@@ -815,6 +855,9 @@ section {
 }
 .footer .box-container .box a:hover i {
   padding-right: 2rem;
+}
+.footer .box-container .box .no-upscap {
+  text-transform: none;
 }
 .footer .credit {
   text-align: center;
@@ -949,10 +992,32 @@ section {
     font-size: 2rem;
     margin: 2.5rem 1rem;
   }
+
+  .products .box-container .box {
+    padding: 4rem 7rem 0;
+  }
+}
+@media (max-width: 600px) {
+  .products .box-container .box {
+    padding: 4rem 2rem 0;
+  }
+}
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .banner .content h3 {
+    font-size: 3rem;
+  }
+
+  .products-first .slide img {
+    height: 15rem;
+  }
 }
 @media (max-width: 414px) {
   .products .box-container .box {
-    padding: 4rem 7rem 0;
+    padding: 4rem 11rem 0;
   }
 }
 @media (max-width: 375px) {
@@ -973,7 +1038,7 @@ section {
   }
 
   .products .box-container .box {
-    padding: 4rem 3rem 0;
+    padding: 4rem 4rem 0;
   }
 }
 

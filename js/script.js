@@ -55,6 +55,26 @@ menu.onclick = () => {
 // }
 
 
+var swiper = new Swiper(".products-slider", {
+  loop:true,
+  spaceBetween: 20,
+  grabCursor:true,
+  centeredSlides: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    991: {
+      slidesPerView: 3,
+    },
+  },
+});
+
+
+
 // swiper-slide > sclient's
 var swiper = new Swiper(".review-slider", {
   loop:true, 
@@ -76,6 +96,8 @@ var swiper = new Swiper(".review-slider", {
       },
   },
 });
+
+
 
 
 

@@ -729,6 +729,39 @@ section {
   text-decoration: underline;
 }
 
+.products-first .slide {
+  text-align: center;
+}
+
+.products-first .slide img {
+  height: 25rem;
+  margin: 5rem 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.products-first .slide h3 {
+  padding: 1rem 0;
+  font-size: 2.5rem;
+  color: #444;
+  text-transform: capitalize;
+  opacity: 0;
+}
+
+.products-first .slide .btn-pd {
+  opacity: 0;
+}
+
+.products-first .swiper-slide-active img {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.products-first .swiper-slide-active h3 .swiper-slide-active .btn-pd,
+.products-first .swiper-slide-active .products .swiper-slide-active .btn-pd {
+  opacity: 1;
+}
+
 .new-collections .box-container {
   gap: 2rem;
   display: -webkit-box;
