@@ -1,3 +1,4 @@
+alert('Nội dung cập nhật được thêm vào mục: "Our Product"')
 // view popup product
 let popupViews = document.querySelectorAll('.model');
 let popupBtns = document.querySelectorAll('.btn');
