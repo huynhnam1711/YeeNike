@@ -47,13 +47,10 @@ menu.onclick = () => {
     searchForm.classList.remove('active');
 }
 
-// // window scroll
-// window.onscroll = () => {
-//   searchBtn.classList.remove('fa-times');
-//   searchFrom.classList.remove('active');
-//   menu.classList.remove('fa-times');
-//   navbar.classList.remove('active');
-// }
+window.onscroll = () =>{
+  menu.classList.remove('fa-times');
+  navbar.classList.remove('active');
+}
 
 const modelRequired = document.querySelector('.security');
 const closeModel = document.querySelector('.icon-btn');
@@ -61,6 +58,7 @@ const closeModel = document.querySelector('.icon-btn');
 closeModel.onclick = () =>{
   modelRequired.classList.toggle('active')
 }
+
 
 // login-required
 var CORRECT_USER = 'YG17';
